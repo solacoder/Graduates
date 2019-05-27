@@ -1,0 +1,284 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\app\article\article.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\configBridge.json" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\CHANGELOG.md" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\dist\js\npm.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\Gruntfile.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\.jshintrc" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\bs-commonjs-generator.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\bs-raw-files-generator.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\change-version.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\grunt\sauce_browsers.yml" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\affix.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\alert.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\button.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\carousel.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\collapse.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\dropdown.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\modal.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\popover.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\scrollspy.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\tab.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\tooltip.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\js\transition.js" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\alerts.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\badges.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\bootstrap.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\breadcrumbs.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\button-groups.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\buttons.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\carousel.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\close.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\code.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\component-animations.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\dropdowns.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\forms.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\glyphicons.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\grid.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\input-groups.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\jumbotron.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\labels.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\list-group.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\media.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\alerts.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\background-variant.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\border-radius.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\buttons.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\center-block.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\clearfix.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\forms.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\gradients.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\grid-framework.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\grid.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\hide-text.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\image.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\labels.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\list-group.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\nav-divider.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\nav-vertical-align.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\opacity.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\pagination.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\panels.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\progress-bar.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\reset-filter.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\reset-text.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\resize.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\responsive-visibility.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\size.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\tab-focus.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\table-row.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\text-emphasis.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\text-overflow.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\mixins\vendor-prefixes.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\modals.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\navbar.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\navs.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\normalize.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\pager.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\pagination.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\panels.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\popovers.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\print.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\progress-bars.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\responsive-embed.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\responsive-utilities.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\scaffolding.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\tables.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\theme.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\thumbnails.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\tooltip.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\type.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\utilities.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\variables.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\less\wells.less" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\LICENSE" />
+    <None Include="wwwroot\assets\plugins\bootstrap-eonasdan-datetimepicker\node_modules\bootstrap\README.md" />
+    <None Include="wwwroot\assets\plugins\jquery-tag-it\.githooks\install.sh" />
+    <None Include="wwwroot\assets\plugins\jquery-tag-it\.githooks\post-commit" />
+    <None Include="wwwroot\assets\plugins\jquery-tag-it\.githooks\pre-commit" />
+    <None Include="wwwroot\js\app\article-category\article-category.js" />
+    <None Include="wwwroot\js\app\article\article.js" />
+    <None Include="wwwroot\js\app\candidate-certificate\candidate-certificate.js" />
+    <None Include="wwwroot\js\app\candidate\candidate.js" />
+    <None Include="wwwroot\js\app\course\course.js" />
+    <None Include="wwwroot\js\app\department\department.js" />
+    <None Include="wwwroot\js\app\faculty\faculty.js" />
+    <None Include="wwwroot\js\app\institution\institution.js" />
+    <None Include="wwwroot\js\app\job\job.js" />
+    <None Include="wwwroot\js\app\news-category\news-category.js" />
+    <None Include="wwwroot\js\app\news\news-pending.js" />
+    <None Include="wwwroot\js\app\news\news.js" />
+    <None Include="wwwroot\js\app\scholarship\scholarship-pending.js" />
+    <None Include="wwwroot\js\app\scholarship\scholarship.js" />
+    <None Include="wwwroot\js\app\setup-name\setupname.js" />
+    <None Include="wwwroot\js\app\setup-value\setupvalue.js" />
+    <None Include="wwwroot\js\app\user\user-pending.js" />
+    <None Include="wwwroot\js\app\user\user.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Graduates.Configurations\Graduates.Configurations.csproj" />
+    <ProjectReference Include="..\Graduates.Core\Graduates.Core.csproj" />
+    <ProjectReference Include="..\Graduates.Persistence\Graduates.Persistence.csproj" />
+    <ProjectReference Include="..\Graduates.Service\Graduates.Service.csproj" />
+    <ProjectReference Include="..\Graduates.ViewModel\Graduates.ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\CandidateCertificate\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\CandidateCertificate\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Candidate\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Department\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Faculty\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Faculty\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Department\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Candidate\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\ArticleCategory\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\ArticleCategory\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Article\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Article\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Job\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Job\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Scholarship\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Scholarship\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\News\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\News\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\NewsCategory\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\NewsCategory\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Institution\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Course\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Course\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Institution\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\SetupValue\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\SetupValue\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\User\ApproveUser.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\User\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\User\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="uploads\articles-images\big-images\" />
+    <Folder Include="uploads\articles-images\thumbnail-images\" />
+    <Folder Include="uploads\news-images\big-images\" />
+    <Folder Include="uploads\news-images\thumbnail-images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="DataTables.AspNet.AspNetCore" Version="2.0.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>

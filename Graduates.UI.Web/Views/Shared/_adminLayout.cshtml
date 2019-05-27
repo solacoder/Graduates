@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Liberian Graduate Admin</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="~/assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/font-awesome/5.2/css/all.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/animate/animate.min.css" rel="stylesheet" />
+    <link href="~/assets/css/default/style.min.css" rel="stylesheet" />
+    <link href="~/assets/css/default/style-responsive.min.css" rel="stylesheet" />
+    <link href="~/assets/css/default/theme/default.css" rel="stylesheet" />
+
+    <link href="~/css/toastr.css" rel="stylesheet" />
+
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN DATA TABLE STYLE ================== -->
+    <link href="~/assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/custom-style.css" rel="stylesheet" />
+    <!-- ================== END DATA TABLE STYLE ================== -->
+    <!-- ================== BEGIN DATEPICKER STYLES ================== -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-datepicker/css/datepicker3.css" />
+    <!-- ================== END DATEPICKER STYLE ================== -->
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/assets/plugins/pace/pace.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="~/assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+    <script src="~/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/js/popover.js"></script>
+    <script src="~/assets/plugins/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap-confirmation/bootstrap-confirmation.js"></script>
+    <script src="~/assets/plugins/ckeditor/ckeditor.js"></script>
+    <!--[if lt IE 9]>
+        <script src="../assets/crossbrowserjs/html5shiv.js"></script>
+        <script src="../assets/crossbrowserjs/respond.min.js"></script>
+        <script src="../assets/crossbrowserjs/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="~/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/assets/plugins/js-cookie/js.cookie.js"></script>
+    <script src="~/assets/js/theme/default.min.js"></script>
+    <script src="~/assets/js/apps.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+    <!-- ================== BEGIN DATA TABLE  JS ================== -->
+    <script src="~/assets/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="~/assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/js/demo/table-manage-default.demo.min.js"></script>
+    <!-- ================== END DATA TABLE JS ================== -->
+
+
+    <script src="~/js/toastr.min.js"></script>
+    <script src="~/js/vue.min.js"></script>
+    <script src="~/js/bootstrapValidator.min.js"></script>
+    <script src="~/js/custom/menu.js"></script>
+    <script src="~/js/custom/page-load-helper.js"></script>
+    <script src="~/js/custom/form-helper.js"></script>
+
+
+</head>
+<body>
+    <!-- begin #page-loader -->
+    <div id="page-loader" class="fade show"><span class="spinner"></span></div>
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <!-- begin #header -->
+        <div id="header" class="header navbar-default">
+            <!-- begin navbar-header -->
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> <b>Color</b> Admin</a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- end navbar-header -->
+            <!-- begin header-nav -->
+            <ul class="navbar-nav navbar-right">
+                <li>
+                    <form class="navbar-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter keyword" />
+                            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+                        <i class="fa fa-bell"></i>
+                        <span class="label">0</span>
+                    </a>
+                    <ul class="dropdown-menu media-list dropdown-menu-right">
+                        <li class="dropdown-header">NOTIFICATIONS (0)</li>
+                        <li class="text-center width-300 p-b-10">
+                            No notification found
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown navbar-user">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="image image-icon bg-black text-grey-darker">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret"></b>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:;" class="dropdown-item">Edit Profile</a>
+                        <a href="javascript:;" class="dropdown-item"><span class="badge badge-danger pull-right">2</span> Inbox</a>
+                        <a href="javascript:;" class="dropdown-item">Calendar</a>
+                        <a href="javascript:;" class="dropdown-item">Setting</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="javascript:;" class="dropdown-item">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- begin sidebar scrollbar -->
+            <div data-scrollbar="true" data-height="100%">
+                <!-- begin sidebar user -->
+                <ul class="nav">
+                    <li class="nav-profile">
+                        <a href="javascript:;" data-toggle="nav-profile">
+                            <div class="cover with-shadow"></div>
+                            <div class="image image-icon bg-black text-grey-darker">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="info">
+                                <b class="caret pull-right"></b>
+                                Sean Ngu
+                                <small>Front end developer</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <ul class="nav nav-profile">
+                            <li><a href="javascript:;"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="javascript:;"><i class="fa fa-pencil-alt"></i> Send Feedback</a></li>
+                            <li><a href="javascript:;"><i class="fa fa-question-circle"></i> Helps</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- end sidebar user -->
+                <!-- begin sidebar nav -->
+                <ul class="nav" id="sidemenuNav">
+                    <li class="nav-header">Navigation</li>
+                    <li class="active">
+                        <a asp-controller="adminhome" asp-action="index">
+                            <i class="fa  fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-building"></i>
+                            <span>Manage Institution</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a asp-controller="institution" asp-action="index">Institution</a></li>
+                            <li><a asp-controller="faculty" asp-action="index">Faculty</a></li>
+                            <li><a asp-controller="department" asp-action="index">Department</a></li>
+                            <li><a asp-controller="course" asp-action="index">Course</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-users"></i>
+                            <span>Candidate</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a asp-controller="candidate" asp-action="index">Candidate</a></li>
+                            <li><a asp-controller="candidateCertificate" asp-action="index">Candidate Certificate</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-newspaper"></i>
+                            <span>News</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a asp-controller="newscategory" asp-action="index">News Category</a></li>
+                            <li><a asp-controller="news" asp-action="index">News</a></li>
+                            <li><a asp-controller="articlecategory" asp-action="index">Article Category</a></li>
+                            <li><a asp-controller="article" asp-action="index">Article</a></li>
+                            <li><a asp-controller="news" asp-action="pendingapprovals">Approve News</a></li>
+                            <li><a asp-controller="article" asp-action="pendingapprovals">Approve Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-newspaper"></i>
+                            <span>Others</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a asp-controller="scholarship" asp-action="index">Scholarship</a></li>
+                            <li><a asp-controller="job" asp-action="index">Internship</a></li>
+                            <li><a asp-controller="scholarship" asp-action="pendingapprovals">Approve Scholarship</a></li>
+                            <li><a asp-controller="internship" asp-action="pendingapprovals">Approve Internship</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-wrench"></i>
+                            <span>Setup</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a asp-controller="setupName" asp-action="index">Setup</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-align-left"></i>
+                            <span>Admin</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a asp-controller="user" asp-action="index">Manage Users</a></li>
+                            <li><a asp-controller="user" asp-action="pendingapprovals">Approve Users</a></li>
+                            <li><a href="javascript:;">Activity Log</a></li>
+                            <li><a href="javascript:;">Transaction Log</a></li>
+                        </ul>
+                    </li>
+                    <!-- begin sidebar minify button -->
+                    <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+                    <!-- end sidebar minify button -->
+                </ul>
+                <!-- end sidebar nav -->
+            </div>
+            <!-- end sidebar scrollbar -->
+        </div>
+        <div class="sidebar-bg"></div>
+        <!-- end #sidebar -->
+        <!-- begin #content -->
+        <div class="content" id="content">
+            <!-- begin breadcrumb -->
+            <ol class="breadcrumb pull-right">
+                <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript:;">Library</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:;">Data</a></li>
+            </ol>
+            <!-- end breadcrumb -->
+            <!-- begin page-header -->
+            <h1 class="page-header">Dashboard <small>Quick Statistics...</small></h1>
+            <!-- end page-header -->
+
+            <main>
+                @RenderBody()
+            </main>
+
+        </div>
+        <!-- end #content -->
+        <!-- begin scroll to top btn -->
+        <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+        <!-- end scroll to top btn -->
+    </div>
+    <!-- end page container -->
+    
+    <script>
+        $(document).ready(function () {
+            App.init();
+
+            var body = $('body');
+            var sidebarParentLink = body.find('ul#sidemenuNav > li > a');
+            var brandLink = body.find('div#nav > a');
+            var dashboardLink = body.find('ul#sidemenuNav > li#dashboard > a');
+            var sidebarChildLink = body.find('ul#sidemenuNav > li > a + ul > li > a');
+            var pageTitle = body.find('div#content > h1.page-header');
+
+            sidebarParentLink.click(function () {
+                var activeParentLink = $(this).find('span').text();
+                body.find('#activeParentLink').text(activeParentLink);
+                body.find('#activeParentHeader').text(activeParentLink);
+            });
+
+
+            dashboardLink.click(function (e) {
+                e.preventDefault();
+                var activeChildLink = "";
+                body.find('#activeChildLink').text(activeChildLink);
+                body.find('main').addClass('active');
+                var url = $(this).attr('href');
+                console.log(url)
+                $.ajax({
+                    url: url,
+                    dataType: "html",
+                    beforeSend: function () {
+                        $('main').empty().removeClass('auto-height');
+                        $('main').html('<img id="loader-img" alt="" src="assets/img/Ajax2.gif" width="50" height="50" style="position: absolute; right: 41%; top: 55vh;" />');
+                    },
+                    success: function (data) {
+                        $('main').html(data).addClass('auto-height');
+                    }
+                });
+            })
+
+            brandLink.click(function (e) {
+                e.preventDefault();
+                var activeChildLink = "";
+                body.find('#activeChildLink').text(activeChildLink);
+                body.find('main').addClass('active');
+                var url = $(this).attr('href');
+                console.log(url)
+                $.ajax({
+                    url: url,
+                    dataType: "html",
+                    beforeSend: function () {
+                        $('main').empty().removeClass('auto-height');
+                        $('main').html('<img id="loader-img" alt="" src="assets/img/Ajax2.gif" width="50" height="50" style="position: absolute; right: 41%; top: 55vh;" />');
+                    },
+                    success: function (data) {
+                        $('main').html(data).addClass('auto-height');
+                    }
+                });
+            })
+
+            sidebarChildLink.click(function (e) {
+                e.preventDefault();
+                var activeChildLink = $(this).text();
+                setPageTitle(activeChildLink, activeChildLink);
+                body.find('#activeChildLink').text(activeChildLink);
+                body.find('main').addClass('active');
+                var url = $(this).attr('href');
+                $.ajax({
+                    url: url,
+                    async: true,
+                    dataType: "html",
+                    beforeSend: function () {
+                        $('main').empty().removeClass('auto-height');
+                        $('main').html('<img id="loader-img" alt="" src="assets/img/Ajax2.gif" width="50" height="50" style="position: absolute; right: 41%; top: 55vh;" />');
+                    },
+                    success: function (data) {
+                        $('main').html(data).addClass('auto-height');
+                    }
+                });
+            })
+
+            function setPageTitle(header, smallHeader) {
+                let headerSmallText = `  <small>${smallHeader}</small>`;
+                pageTitle.text(header).append(headerSmallText);
+            }
+
+        });
+        
+
+    </script>
+</body>
+</html>
+

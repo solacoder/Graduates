@@ -1,0 +1,86 @@
+﻿@model Graduates.ViewModel.ViewModels.JobVM
+
+<form id="form" method="post" asp-action="create" asp-antiforgery="true" class="form-horizontal">
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="Company"></label>
+        <div class="col-md-10 col-sm-10">
+            <input asp-for="Company" name="name" class="form-control" type="text" autocomplete="off" placeholder="Company" v-model="vm.job.company" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="Title"></label>
+        <div class="col-md-10 col-sm-10">
+            <input asp-for="Title" name="title" class="form-control" type="text" autocomplete="off" placeholder="Title" v-model="vm.job.title" />
+        </div>
+    </div>
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="Email"></label>
+        <div class="col-md-10 col-sm-10">
+            <input asp-for="Email" name="email" class="form-control" type="text" autocomplete="off" placeholder="Email" v-model="vm.job.email" />
+        </div>
+    </div>
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="Phone"></label>
+        <div class="col-md-10 col-sm-10">
+            <input asp-for="Phone" name="phone" class="form-control" type="text" autocomplete="off" placeholder="Phone" v-model="vm.job.phone" />
+        </div>
+    </div>
+ 
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="Description"></label>
+        <div class="col-md-10 col-sm-10">
+            <textarea class="ckeditor" id="Description" name="description" v-model="vm.job.description" rows="10"></textarea>
+        </div>
+    </div>
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="Requirements"></label>
+        <div class="col-md-10 col-sm-10">
+            <textarea class="ckeditor" id="Requirements" name="requirements" v-model="vm.job.requirements" rows="10"></textarea>
+        </div>
+    </div>
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="Responsibilities"></label>
+        <div class="col-md-10 col-sm-10">
+            <textarea class="ckeditor" id="Responsibilities" name="responsibilities" v-model="vm.job.Responsibilities" rows="10"></textarea>
+        </div>
+    </div>
+    <div class="form-group row m-b-15">
+        <label class="col-md-2 col-sm-2 col-form-label" asp-for="HowToApply"></label>
+        <div class="col-md-10 col-sm-10">
+            <textarea class="ckeditor" id="HowToApply" name="howToApply" v-model="vm.job.howToApply" rows="10"></textarea>
+        </div>
+    </div>
+
+
+    <button id="sub-btn" style="display:none" type="submit" class="btn btn-success">Submit</button>
+
+</form>
+
+
+<!-- #modal-dialog -->
+<div class="modal fade" id="modal-dialog-inner">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Image</h4>
+                <button id="dismissTop" onclick="dismissImageModal()" type="button" class="close" aria-hidden="true">×</button>
+            </div>
+            <div id="modal-body" class="modal-body">
+                <div id="image-display" class="row"></div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:;" id="dismissBottom" onclick="dismissImageModal()" class="btn btn-white">Close</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace();
+</script>

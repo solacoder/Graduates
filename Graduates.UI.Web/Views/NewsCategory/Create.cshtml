@@ -1,0 +1,24 @@
+﻿@model Graduates.ViewModel.ViewModels.NewsCategoryVM
+
+<form id="form" method="post" asp-action="create" asp-antiforgery="true" class="form-horizontal">
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Name"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Name" name="name" class="form-control" type="text" autocomplete="off" placeholder="Name" v-model="vm.newsCategory.name" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Description"></label>
+        <div class="col-md-9 col-sm-9">
+            <textarea cols="5" asp-for="Description" name="description" class="form-control" type="description" autocomplete="off" placeholder="Description" v-model="vm.newsCategory.description" />
+        </div>
+    </div>
+
+
+    <button id="sub-btn" style="display:none" type="submit" class="btn btn-success">Submit</button>
+
+</form>
+
+

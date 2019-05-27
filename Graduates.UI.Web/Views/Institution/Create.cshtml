@@ -1,0 +1,87 @@
+﻿@model Graduates.ViewModel.ViewModels.InstitutionVM
+
+<form id="form" method="post" asp-action="create" asp-antiforgery="true" class="form-horizontal">
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Name"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Name" name="name" class="form-control" type="text" autocomplete="off" placeholder="Name" v-model="vm.institution.name" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Email"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Email" name="email" class="form-control" type="email" autocomplete="off" placeholder="Email" v-model="vm.institution.email" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Phone"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Phone" name="phone" class="form-control" type="text" autocomplete="off" placeholder="Phone" v-model="vm.institution.phone" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Address"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Address" name="address" class="form-control" type="text" autocomplete="off" placeholder="Address" v-model="vm.institution.address" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="WebSite"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="WebSite" name="website" class="form-control" type="url" autocomplete="off" placeholder="Website" v-model="vm.institution.website" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="YearEstablished"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="YearEstablished" name="yearEstablished" class="form-control" type="text" autocomplete="off" placeholder="Year Established" v-model="vm.institution.yearEstablished" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="TypeId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" name="typeId" v-model="vm.institution.typeId">
+                <option value="0">Select Type </option>
+                <option v-bind:value="type.id" v-for="type in vm.types">
+                    {{type.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="CountyId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" name="countyId" v-model="vm.institution.countyId">
+                <option value="0">Select County </option>
+                <option v-bind:value="county.id" v-for="county in vm.counties">
+                    {{county.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="OwnerShipTypeId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" name="ownerShipTypeId" v-model="vm.institution.ownerShipTypeId">
+                <option value="0">Select Ownership Type </option>
+                <option v-bind:value="ownershipType.id" v-for="ownershipType in vm.ownerShipTypes">
+                    {{ownershipType.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <button id="sub-btn" style="display:none" type="submit" class="btn btn-success">Submit</button>
+
+</form>
+
+

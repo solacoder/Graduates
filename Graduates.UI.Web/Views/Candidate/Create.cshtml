@@ -1,0 +1,83 @@
+﻿@model Graduates.ViewModel.ViewModels.CandidateVM
+
+<script src="../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<form id="form" method="post" asp-action="create" asp-antiforgery="true" class="form-horizontal">
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.CandidateNo"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="CandidateNo" disabled="disabled" name="candidateNo" class="form-control" type="text" autocomplete="off" placeholder="CandidateNo" v-model="vm.candidate.candidateNo" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.FirstName"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="FirstName" name="firstName" class="form-control" type="text" autocomplete="off" placeholder="FirstName" v-model="vm.candidate.firstName" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.MiddleName"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="MiddleName" name="middleName" class="form-control" type="text" autocomplete="off" placeholder="MiddleName" v-model="vm.candidate.middleName" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.LastName"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="LastName" name="lastName" class="form-control" type="text" autocomplete="off" placeholder="LastName" v-model="vm.candidate.lastName" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.Email"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Email" name="email" class="form-control" type="email" autocomplete="off" placeholder="Email" v-model="vm.candidate.email" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.Phone"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Phone" name="phone" class="form-control" type="text" autocomplete="off" placeholder="Phone" v-model="vm.candidate.phone" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.DateOfBirth"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="DateOfBirth" data-autoClose="true" data-provide="datepicker" data-date-format="dd/mm/yyyy" name="dateOfBirth" class="form-control" type="text" autocomplete="off" placeholder="Date of Birth" v-model="vm.candidate.dateOfBirth" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.SexId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" name="sexId" v-model="vm.candidate.sexId">
+                <option value="">Select Sex </option>
+                <option v-bind:value="sex.id" v-for="sex in vm.sexes">
+                    {{sex.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.CountyId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" name="countyId" v-model="vm.candidate.countyId">
+                <option value="">Select County </option>
+                <option v-bind:value="county.id" v-for="county in vm.counties">
+                    {{county.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <button id="sub-btn" style="display:none" type="submit" class="btn btn-success">Submit</button>
+
+</form>
+

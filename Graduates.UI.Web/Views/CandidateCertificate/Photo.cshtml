@@ -1,0 +1,52 @@
+﻿@model Graduates.ViewModel.ViewModels.CandidatePhotoVM
+
+<form id="form" method="post" asp-action="create" asp-antiforgery="true" class="form-horizontal">
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Name"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Name" name="name" class="form-control" type="text" autocomplete="off" placeholder="Name" v-model="vm.department.name" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Email"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Email" name="email" class="form-control" type="email" autocomplete="off" placeholder="Email" v-model="vm.department.email" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="Phone"></label>
+        <div class="col-md-9 col-sm-9">
+            <input asp-for="Phone" name="phone" class="form-control" type="text" autocomplete="off" placeholder="Phone" v-model="vm.department.phone" />
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="InstitutionId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" name="institutionId" v-on:change="loadFaculties()" v-model="vm.department.institutionId">
+                <option value="0">Select Institution </option>
+                <option v-bind:value="institution.id" v-for="institution in vm.institutions">
+                    {{institution.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="FacultyId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" name="facultyId" v-model="vm.department.facultyId">
+                <option value="0">Select Faculty </option>
+                <option v-bind:value="faculty.id" v-for="faculty in vm.faculties">
+                    {{faculty.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <button id="sub-btn" style="display:none" type="submit" class="btn btn-success">Submit</button>
+
+</form>

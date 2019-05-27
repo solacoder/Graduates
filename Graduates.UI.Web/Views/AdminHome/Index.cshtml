@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- begin row -->
+<div class="row" id="modal-body">
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-red">
+            <div class="stats-icon"><i class="fa fa-desktop"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.institutions.description}}</h4>
+                <p>{{vm.institutions.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-orange">
+            <div class="stats-icon"><i class="fa fa-link"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.faculties.description}}</h4>
+                <p>{{vm.faculties.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-grey-darker">
+            <div class="stats-icon"><i class="fa fa-users"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.departments.description}}</h4>
+                <p>{{vm.departments.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-black-lighter">
+            <div class="stats-icon"><i class="fa fa-clock"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.courses.description}}</h4>
+                <p>{{vm.courses.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-red">
+            <div class="stats-icon"><i class="fa fa-desktop"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.programs.description}}</h4>
+                <p>{{vm.programs.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-orange">
+            <div class="stats-icon"><i class="fa fa-link"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.news.description}}</h4>
+                <p>{{vm.news.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-grey-darker">
+            <div class="stats-icon"><i class="fa fa-users"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.articles.description}}</h4>
+                <p>{{vm.articles.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-lg-3 col-md-6">
+        <div class="widget widget-stats bg-black-lighter">
+            <div class="stats-icon"><i class="fa fa-clock"></i></div>
+            <div class="stats-info">
+                <h4>{{vm.candidates.description}}</h4>
+                <p>{{vm.candidates.value}}</p>
+            </div>
+            <div class="stats-link">
+                <a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+
+</div>
+<!-- end row -->
+
+<!-- end panel -->
+
+<script src="~/js/app/dash-board/dash-board.js"></script>

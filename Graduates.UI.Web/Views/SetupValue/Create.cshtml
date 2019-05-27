@@ -1,0 +1,38 @@
+﻿@model Graduates.ViewModel.ViewModels.SetupValueVM
+
+<form id="form" method="post" asp-action="create" asp-antiforgery="true" class="form-horizontal">
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.SetUpNameId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control disabled" autocomplete="off" name="setUpNameId" v-model="vm.setUpValue.setUpNameId" disabled="disabled">
+                <option value="">Select Setup Name</option>
+                <option v-bind:value="setUpName.id" v-for="setUpName in vm.setUpNames">{{setUpName.name}}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.Name"></label>
+        <div class="col-md-9 col-sm-9">
+            <input class="form-control" autocomplete="off" name="name" placeholder="Enter Name" type="text" v-model="vm.setUpValue.name">
+        </div>
+    </div>
+
+    <div class="form-group row m-b-15">
+        <label class="col-md-3 col-sm-3 col-form-label" asp-for="@Model.ParentId"></label>
+        <div class="col-md-9 col-sm-9">
+            <select class="form-control" autocomplete="off" name="parent" v-model="vm.setUpValue.parentId">
+                <option value="0">Select Parent</option>
+                <option v-bind:value="parent.id" v-for="parent in vm.parents">{{parent.name}}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <button id="sub-btn" style="display:none" type="submit" class="btn btn-success">Submit</button>
+
+
+</form>
+
